@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Header from '../app/pages/component/Header' 
 import Header2 from '../app/pages/component/Header2'
 import HeroSection from '../app/pages/component/HeroSection'
