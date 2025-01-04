@@ -1,21 +1,459 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* styles/globals.css */
+/* Updated Header.module.css */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* globals.css */
+
+/* globals.css */
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Space out the sections */
+  align-items: center;
+  background-color: #1b3f65; /* Deep blue background */
+  height: 50px;
+  color: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 110px; /* Space between email and phone */
+  margin-left: 1230px; /* Move to the right */
+}
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1px; /* Space between social media links */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icon span {
+  font-size: 14px;
+}
+
+.icon img {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.icon:hover {
+  color: #d9b00f; /* Highlight color on hover */
+}
+
+/* header2 */
+/* styles/globals.css */
+.header2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-image: url("/logo.gif"); /* Your gif file */
+  background-size: cover; /* Ensure the gif covers the area */
+  background-position: center;
+}
+
+.logo-image {
+  height: 40px;
+  margin-right: 5px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1c4a71; /* Navy blue */
+}
+
+.highlight {
+  color: #f8a531; /* Orange */
+}
+
+/* Christmas hat */
+.logo .logo-image:first-child {
+  position: absolute;
+  left: -22px; /* Adjust to place the hat at the left corner */
+  top: -15px; /* Adjust this to control the vertical position */
+  width: 40px; /* Adjust size of the hat */
+  height: auto; /* Maintain aspect ratio */
+}
+/* 
+/* navigation styles */
+.navigation {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold; /* Makes the text bold */
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: #1c4a71;
+}
+.dropdown {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f8f8f8;
+}
+
+/* Actions section (search and button) */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-icon {
+  width: 38px; /* Adjust size */
+  height: 38px; /* Adjust size */
+  cursor: pointer;
+}
+
+.cta-button {
+  background-color: #f8a531; /* Orange */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e69528;
+}
+
+/* Adjusting for image-based dropdown arrow */
+.dropdown-arrow {
+  width: 12px; /* Adjust image size for dropdown arrow */
+  height: 12px;
+  margin-left: 2px; /* Optional, space for better alignment */
+}
+
+.cta-button img {
+  width: 16px;
+  height: 16px;
+}
+
+/*HeroSection */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 240, 220, 0.67),
+    rgba(237, 246, 255, 0.7)
+  );
+  border-radius: 10px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.star {
+  width: 20px; /* Adjust size */
+  height: 20px;
+}
+
+.stars img {
+  width: 20px; /* Adjust size */
+  height: 20px;
+  margin-right: 5px; /* Space between stars */
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.description {
+  font-size: 22px;
+  color: #555555;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.description strong {
+  color: rgba(0, 0, 0, 0.788);
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px; /* Space between the image and text */
+}
+
+.stat-item.vertical {
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-icon {
+  width: 70px; /* Adjust icon size */
+  height: 70px;
+}
+
+.stat-info {
+  text-align: center;
+}
+
+.rating-text {
+  background: linear-gradient(to right, #ffa229, #1c4670); /* Gradient color */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  color: transparent; /* Make the text color transparent so the gradient is visible */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.stats span {
+  font-size: 24px;
+  font-weight: bold;
+  /* color: #1c4a71; */
+}
+
+.stats p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  margin-top: 10px; /* Ensures that "Client", "Financial Stability" etc. is below the number */
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.cta-button {
+  background-color: #f8a531;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e69528;
+}
+
+.secondary-button {
+  background: none;
+  color: #1c4a71;
+  padding: 10px 20px;
+  border: 2px solid #1c4a71;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.secondary-button:hover {
+  background-color: #1c4a71;
+  color: white;
+}
+
+.hero-image {
+  max-width: 40%;
+  margin-right:1px;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+.services-menu {
+  position: absolute;
+  top: 39px;
+  right:-2%;
+  height:298px;
+  width: 177px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.services-menu2 {
+  position: absolute;
+  top: 376px;
+  right:0%;
+  height:778px;
+  width: 227px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.services-menu button {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.services-menu button:hover {
+  background-color: #f8f8f8;
+}
+
+
+/* trustedbycss */
+img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+/* background-color: #e69528; */
+/* Stepscss */
+.steps-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #e69528;
+  height: 120px; /* Adjust based on content height */
+  margin-top: 10px;
+  gap: 40px; /* Add more space between each step */
+  padding: 20px; /* Add some padding inside the container */
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Increase space between the icon and text */
+  font-family: Arial, sans-serif;
+  font-size: 20px; /* Slightly smaller text compared to default */
+  color: rgb(4, 1, 1); /* Make text visible on the background */
+  align-items: center; /* Ensure images and text align properly */
+}
+
+.iconstep img {
+  width: 60px; /* Increased size of the image */
+  height: 60px; /* Increased size of the image */
+  /* Ensure the image scales properly without distortion */
+}
+
+p {
+  margin: 0; /* Remove margin for better alignment */
+}
+
+
+
+
+
+/* BlogSection css */
+.blogSection {
+  padding: 20px;
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.blogPost {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.showMore {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
